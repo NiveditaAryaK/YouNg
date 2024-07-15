@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flutter App</title>
+  <!-- Add Firebase SDKs for Firebase products that you want to use -->
+  <script defer src="/__/firebase/9.23.0/firebase-app.js"></script>
+  <script defer src="/__/firebase/9.23.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+  <!-- Add Google Sign-In client ID -->
+  <meta name="google-signin-client_id" content="451212028757-4cqlg4cr15i21gqipi2k46u6cqe4renv.apps.googleusercontent.com">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Load Google Identity Services API -->
+  <script async defer src="https://accounts.google.com/gsi/client" onload="renderButton()"></script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="onApiLoad()"></script>
+</head>
+<body>
+  <script src="main.dart.js" type="application/javascript"></script>
+  <div id="g_id_onload"></div>
+  <script>
+    function onApiLoad() {
+      gapi.load('auth2', () => {
+        gapi.auth2.init({
+          client_id: '451212028757-4cqlg4cr15i21gqipi2k46u6cqe4renv.apps.googleusercontent.com'
+        });
+      });
+    }
+
+    function renderButton() {
+      google.accounts.id.initialize({
+        client_id: '451212028757-4cqlg4cr15i21gqipi2k46u6cqe4renv.apps.googleusercontent.com',
+        callback: handleCredentialResponse
+      });
+      google.accounts.id.renderButton(
+        document.getElementById('g_id_onload'),
+        { theme: 'outline', size: 'large' }
+      );
+    }
+
+    function handleCredentialResponse(response) {
+      // Pass the response to your Flutter app.
+      // Typically you would handle this in Flutter code.
+      console.log(response);
+    }
+  </script>
+</body>
+</html>

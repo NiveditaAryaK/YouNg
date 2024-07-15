@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "451212028757",
+    "project_id": "young-7d242",
+    "storage_bucket": "young-7d242.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451212028757:android:edb317be511a603e6f5ddc",
+        "android_client_info": {
+          "package_name": "com.young.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ9JtdgsoI1wGqeLaP2SyHwv2wCq-KHBY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
